@@ -43,6 +43,7 @@ type Entry = {
   subject_name: string;
   instructor_name: string | null;
   group_number: string | null;
+  room: string | null;
   notes: string | null;
 };
 
@@ -80,7 +81,7 @@ function SchedulePage() {
     void (async () => {
       const { data, error } = await supabase
         .from("schedules")
-        .select("id, day, slot, subject_name, instructor_name, group_number, notes")
+        .select("id, day, slot, subject_name, instructor_name, group_number, room, notes")
         .eq("user_id", user.id);
       if (error) {
         toast.error(friendlyError(error, "تعذّر تحميل جدولك."));
@@ -145,7 +146,7 @@ function SchedulePage() {
         : [
             ...entries,
             ...targetSlots.map((slot) => ({
-              id: crypto.randomUUID(),
+              id: globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`,
               day: target.day,
               slot,
               ...values,
@@ -173,7 +174,7 @@ function SchedulePage() {
         .insert(
           targetSlots.map((slot) => ({ ...values, day: target.day, slot, user_id: user.id })),
         )
-        .select("id, day, slot, subject_name, instructor_name, group_number, notes");
+        .select("id, day, slot, subject_name, instructor_name, group_number, room, notes");
       setBusy(false);
       if (error) {
         toast.error(friendlyError(error));
@@ -337,13 +338,14 @@ function SchedulePage() {
                                 {entry.subject_name}
                               </span>
                               <span className="block truncate text-[11px] text-muted-foreground">
-                                {[
-                                  entry.instructor_name,
-                                  entry.group_number ? `جروب ${entry.group_number}` : null,
-                                ]
-                                  .filter(Boolean)
-                                  .join(" · ")}
-                              </span>
+  {[
+    entry.instructor_name,
+    entry.group_number ? `جروب ${entry.group_number}` : null,
+    entry.room ? `📍 ${entry.room}` : null,
+  ]
+    .filter(Boolean)
+    .join(" · ")}
+</span>
                             </>
                           ) : (
                             <span className="text-xs text-muted-foreground/70">إضافة مادة</span>
@@ -471,6 +473,9 @@ function FragmentRow({
                 {entry.group_number && (
                   <span className="block text-muted-foreground">جروب {entry.group_number}</span>
                 )}
+                {entry.room && (
+  <span className="block text-muted-foreground">📍 {entry.room}</span>
+)}
               </span>
             ) : disabled ? null : (
               <span className="flex h-full items-center justify-center text-muted-foreground/60">
@@ -503,16 +508,23 @@ function EntryDialog({
   onSave: (v: Omit<Entry, "id" | "day" | "slot">) => void;
   onDelete?: (() => void) | undefined;
 }) {
-  const [form, setForm] = useState({ subject: "", instructor: "", group: "", notes: "" });
+  const [form, setForm] = useState({
+  subject: "",
+  instructor: "",
+  group: "",
+  room: "",
+  notes: "",
+});
 
   useEffect(() => {
     if (!open) return;
     setForm({
-      subject: entry?.subject_name ?? "",
-      instructor: entry?.instructor_name ?? "",
-      group: entry?.group_number ?? "",
-      notes: entry?.notes ?? "",
-    });
+  subject: entry?.subject_name ?? "",
+  instructor: entry?.instructor_name ?? "",
+  group: entry?.group_number ?? "",
+  room: entry?.room ?? "",
+  notes: entry?.notes ?? "",
+});
   }, [open, entry]);
 
   const submit = (e: React.FormEvent) => {
@@ -526,10 +538,11 @@ function EntryDialog({
       toast.error("اسم المادة طويل جداً");
       return;
     }
-    onSave({
+       onSave({
       subject_name: subject,
       instructor_name: form.instructor.trim().slice(0, 100) || null,
       group_number: form.group.trim().slice(0, 20) || null,
+      room: form.room.trim().slice(0, 50) || null,
       notes: form.notes.trim().slice(0, 300) || null,
     });
   };
@@ -553,26 +566,38 @@ function EntryDialog({
               maxLength={100}
             />
           </div>
+
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="space-y-2">
-              <Label htmlFor="instructor">المحاضر</Label>
-              <Input
-                id="instructor"
-                value={form.instructor}
-                onChange={(e) => setForm({ ...form, instructor: e.target.value })}
-                maxLength={100}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="group">الجروب</Label>
-              <Input
-                id="group"
-                value={form.group}
-                onChange={(e) => setForm({ ...form, group: e.target.value })}
-                maxLength={20}
-              />
-            </div>
-          </div>
+  <div className="space-y-2">
+    <Label htmlFor="instructor">المحاضر</Label>
+    <Input
+      id="instructor"
+      value={form.instructor}
+      onChange={(e) => setForm({ ...form, instructor: e.target.value })}
+      maxLength={100}
+    />
+  </div>
+  <div className="space-y-2">
+    <Label htmlFor="group">الجروب</Label>
+    <Input
+      id="group"
+      value={form.group}
+      onChange={(e) => setForm({ ...form, group: e.target.value })}
+      maxLength={20}
+    />
+  </div>
+</div>
+
+<div className="space-y-2">
+  <Label htmlFor="room">القاعة</Label>
+  <Input
+    id="room"
+    value={form.room}
+    onChange={(e) => setForm({ ...form, room: e.target.value })}
+    placeholder="مثال: E103"
+    maxLength={50}
+  />
+</div>
           <div className="space-y-2">
             <Label htmlFor="notes">ملاحظات</Label>
             <Textarea

@@ -25,6 +25,7 @@ export type ExportEntry = {
   subject_name: string;
   instructor_name: string | null;
   group_number: string | null;
+  room: string | null;
 };
 
 export const ExportSheet = forwardRef<
@@ -166,6 +167,9 @@ export const ExportSheet = forwardRef<
                         ) : null}
                         {entry.instructor_name ? (
                           <div style={{ fontSize: 10, color: C.muted }}>{entry.instructor_name}</div>
+                        ) : null}
+                        {entry.room ? (
+                        <div style={{ fontSize: 10, color: C.primarySoft }}>📍 {entry.room}</div>
                         ) : null}
                       </div>
                     ) : null}

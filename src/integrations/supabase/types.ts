@@ -210,6 +210,7 @@ export type Database = {
           id: string
           instructor_name: string | null
           notes: string | null
+          room: string | null
           slot: number
           subject_name: string
           updated_at: string
@@ -222,6 +223,7 @@ export type Database = {
           id?: string
           instructor_name?: string | null
           notes?: string | null
+          room?: string | null
           slot: number
           subject_name: string
           updated_at?: string
@@ -234,6 +236,7 @@ export type Database = {
           id?: string
           instructor_name?: string | null
           notes?: string | null
+          room?: string | null
           slot?: number
           subject_name?: string
           updated_at?: string
