@@ -4,7 +4,6 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { Loader2, LogIn, UserPlus } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable/index";
 import { useAuth } from "@/hooks/useAuth";
 import { friendlyError, formatSpecialization } from "@/lib/format";
 import { SPECIALIZATION_OPTIONS, BATCH_OPTIONS } from "@/lib/constants";
@@ -110,18 +109,22 @@ function AuthPage() {
   };
 
   const handleGoogle = async () => {
-    setBusy(true);
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: window.location.origin,
-    });
-    if (result.error) {
-      setBusy(false);
-      toast.error("تعذّر تسجيل الدخول بجوجل، حاول تاني.");
-      return;
-    }
-    if (result.redirected) return;
-    void navigate({ to: "/", replace: true });
-  };
+  setBusy(true);
+
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: window.location.origin,
+    },
+  });
+
+  if (error) {
+    setBusy(false);
+    toast.error("تعذّر تسجيل الدخول بجوجل، حاول تاني.");
+  }
+};
+
+
 
   return (
     <div className="container-page flex min-h-[80vh] items-center justify-center py-12">
