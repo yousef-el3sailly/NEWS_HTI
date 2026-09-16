@@ -182,8 +182,11 @@ export const ExportSheet = forwardRef<
       </table>
 
       <div style={{ marginTop: 14, fontSize: 11, color: C.muted, textAlign: "center" }}>
-        تم إنشاء هذا الجدول عبر منصة NEWS — مجتمع طلاب HTI
-      </div>
+  <div>تم إنشاء هذا الجدول عبر منصة NEWS — مجتمع طلاب HTI</div>
+  <div style={{ marginTop: 4, color: C.primarySoft, fontWeight: 700 }}>
+  تصميم وتطوير بواسطة Yousef Amin A El-Assaily
+</div>
+</div>
     </div>
   );
 });

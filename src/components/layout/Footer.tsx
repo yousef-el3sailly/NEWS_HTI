@@ -56,9 +56,15 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
-        © NEWS Community — HTI
-      </div>
+     <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
+     <p>© NEWS Community — HTI</p>
+     <p className="mt-1">
+        تصميم وتطوير بواسطة{" "}
+        <span className="font-semibold text-primary">
+          Yousef Amin A El-Assaily
+        </span>
+      </p>
+    </div>
     </footer>
   );
 }

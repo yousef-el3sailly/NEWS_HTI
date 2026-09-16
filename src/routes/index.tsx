@@ -122,15 +122,15 @@ function Home() {
             <div className="flex justify-center lg:justify-start">
               <Logo size={88} withText={false} />
             </div>
-            <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-bold text-primary-soft">
-              <Sparkles className="size-3.5" /> منصة طلابية بناها طلاب HTI
-            </span>
+         <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-bold text-primary-soft">
+  <GraduationCap className="size-3.5" />
+  تصميم وتطوير بواسطة Yousef Amin A El-Assaily
+</span>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.15] text-foreground sm:text-5xl lg:text-6xl">
               مجتمع طلاب <span className="text-primary">HTI</span> في مكان واحد
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-loose text-muted-foreground lg:mx-0 lg:text-lg">
-             أخبار وفعاليات المعهد، منشئ الجدول الدراسي، ومصادر المواد والخطط الدراسية — كلها في منصة واحدة منظّمة وسهلة.
-            </p>
+             تابع جدولك وموادك، اعرف آخر أخبار وفعاليات المعهد، ووصل للمصادر والخطط الدراسية من مكان واحد.</p>
             <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
               <Link
                 to="/schedule"
