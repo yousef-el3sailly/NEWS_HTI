@@ -11,7 +11,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logoUrl from "../assets/news-logo.png?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AuthProvider } from "@/hooks/useAuth";
 import { Navbar } from "@/components/layout/Navbar";
@@ -89,24 +88,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "كل أخبارك، جداولك، ومصادرك الدراسية في مكان واحد — مجتمع طلاب HTI.",
       },
       { property: "og:title", content: "NEWS — مجتمع طلاب HTI" },
-      { property: "og:description", content: "أخبار وفعاليات وجدول دراسي ومصادر UniCourses." },
+      {
+        property: "og:description",
+        content: "أخبار وفعاليات وجدول دراسي ومصادر UniCourses.",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://news-hti.vercel.app/",
+      },
       {
         property: "og:image",
-        content: `https://news-hti.vercel.app${logoUrl}`,
+        content: "https://news-hti.vercel.app/favicon.png",
+      },
+      {
+        property: "og:image:secure_url",
+        content: "https://news-hti.vercel.app/favicon.png",
+      },
+      {
+        property: "og:image:type",
+        content: "image/png",
       },
       {
         property: "og:image:width",
-        content: "1200",
+        content: "1254",
       },
       {
         property: "og:image:height",
-        content: "1200",
+        content: "1254",
+      },
+      {
+        property: "og:site_name",
+        content: "NEWS — مجتمع طلاب HTI",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
       },
       {
         name: "twitter:image",
-        content: `https://news-hti.vercel.app${logoUrl}`,
+        content: "https://news-hti.vercel.app/favicon.png",
       },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
