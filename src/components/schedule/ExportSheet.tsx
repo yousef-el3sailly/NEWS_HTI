@@ -169,7 +169,9 @@ export const ExportSheet = forwardRef<
                           <div style={{ fontSize: 10, color: C.muted }}>{entry.instructor_name}</div>
                         ) : null}
                         {entry.room ? (
-                        <div style={{ fontSize: 10, color: C.primarySoft }}>📍 {entry.room}</div>
+                          <div style={{ fontSize: 10, color: C.primarySoft }}>
+                            📍 {entry.room}
+                          </div>
                         ) : null}
                       </div>
                     ) : null}
@@ -181,12 +183,26 @@ export const ExportSheet = forwardRef<
         </tbody>
       </table>
 
-      <div style={{ marginTop: 14, fontSize: 11, color: C.muted, textAlign: "center" }}>
-  <div>تم إنشاء هذا الجدول عبر منصة NEWS — مجتمع طلاب HTI</div>
-  <div style={{ marginTop: 4, color: C.primarySoft, fontWeight: 700 }}>
-  تصميم وتطوير بواسطة Yousef Amin A El-Assaily
-</div>
-</div>
+      <div
+        style={{
+          marginTop: 14,
+          fontSize: 11,
+          color: C.muted,
+          textAlign: "center",
+        }}
+      >
+        <div>تم إنشاء هذا الجدول عبر منصة NEWS — مجتمع طلاب HTI</div>
+
+        <div
+          style={{
+            marginTop: 4,
+            color: C.primarySoft,
+            fontWeight: 700,
+          }}
+        >
+          تصميم وتطوير بواسطة Yousef Amin A El-Assaily
+        </div>
+      </div>
     </div>
   );
 });
