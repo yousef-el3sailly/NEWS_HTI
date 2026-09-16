@@ -102,11 +102,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:image",
-        content: "https://news-hti.vercel.app/og-image.png",
+        content: "https://news-hti.vercel.app/news-logo.png",
       },
       {
         property: "og:image:secure_url",
-        content: "https://news-hti.vercel.app/og-image.png",
+        content: "https://news-hti.vercel.app/news-logo.png",
       },
       {
         property: "og:image:type",
@@ -130,7 +130,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         name: "twitter:image",
-        content: "https://news-hti.vercel.app/og-image.png",
+        content: "https://news-hti.vercel.app/news-logo.png",
       },
     ],
     links: [
