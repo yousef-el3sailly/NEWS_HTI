@@ -26,11 +26,11 @@ export function Logo({
         <span className="flex flex-col leading-none">
           <span
             className={cn(
-              "text-base font-extrabold tracking-[0.12em]",
+              "text-base font-extrabold tracking-[0.18em]",
               tone === "inverted" ? "text-sidebar-foreground" : "text-primary",
             )}
           >
-            NEWS × UniCourses
+            NEWS
           </span>
           <span
             className={cn(
