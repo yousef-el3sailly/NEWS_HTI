@@ -22,7 +22,7 @@ export const Route = createFileRoute("/about")({
 });
 
 const VALUES = [
-  { icon: Users, title: "مجتمع أولاً", text: "منصة لخدمة طلاب HTI، بكل بساطة ومن غير تعقيد." },
+  { icon: Users, title: "مجتمع أولاً", text: "منصة لخدمة طلاب، بكل بساطة ومن غير تعقيد." },
   { icon: Compass, title: "معلومة موثوقة", text: "أخبار وخطط دراسية مراجعة، بدون شائعات." },
   {
     icon: HeartHandshake,

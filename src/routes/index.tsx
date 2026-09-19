@@ -413,7 +413,7 @@ function Home() {
         <SectionHeading
           eyebrow="FOUNDERS"
           title="مؤسسو NEWS"
-          description="الفريق اللي بدأ الفكرة وبيطوّرها باستمرار لخدمة طلاب المعهد."
+          description="من فكرة بسيطة، لمنصة بتكبر لخدمة طلاب المعهد."
           action={
             <Link
               to="/about"
