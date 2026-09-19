@@ -22,7 +22,7 @@ export const Route = createFileRoute("/about")({
 });
 
 const VALUES = [
-  { icon: Users, title: "مجتمع أولاً", text: "منصة بيبنيها الطلاب لخدمة الطلاب، من غير تعقيد." },
+  { icon: Users, title: "مجتمع أولاً", text: "منصة لخدمة طلاب HTI، بكل بساطة ومن غير تعقيد." },
   { icon: Compass, title: "معلومة موثوقة", text: "أخبار وخطط دراسية مراجعة، بدون شائعات." },
   {
     icon: HeartHandshake,
@@ -72,7 +72,7 @@ function AboutPage() {
         <SectionHeading
           eyebrow="FOUNDERS"
           title="مؤسسو NEWS"
-          description="فريق من طلاب المعهد من تخصصات ودفعات مختلفة، بيشتغلوا على تطوير المنصة."
+          description="فريق من طلاب المعهد من تخصصات ودفعات مختلفة"
         />
         <FoundersGrid />
       </section>
