@@ -6,6 +6,7 @@ import graduateImage from "@/assets/founders/graduate_girl.png";
 import ahmedImage from "@/assets/founders/ahmed.jpeg";
 import girlImage from "@/assets/founders/girl.png";
 import mohamedImage from "@/assets/founders/mohamed.jpeg";
+import yamacImage from "@/assets/founders/yamac.jpg";
 export const SPECIALIZATIONS = [
   {
     id: "bis",
@@ -76,7 +77,7 @@ export const FOUNDERS: ReadonlyArray<{
       name: "يوسف العسيلي",
       specialization: "ممثل نظم معلومات الأعمال (BIS)",
       batch: "2022",
-      role: "مؤسس ومطور التجربة الرقمية لـ NEWS | ساهم في امتداد NEWS داخل تخصص نظم المعلومات",
+      role: "مؤسس ومطور التجربة الرقمية لـ NEWS x UniCourses | ساهم في امتداد NEWS داخل تخصص نظم المعلومات",
       photo: yousefImage,
       facebookUrl: "https://www.facebook.com/JOEelesailly",
       whatsappUrl: "https://wa.me/201013722259",
@@ -125,6 +126,15 @@ export const FOUNDERS: ReadonlyArray<{
       photo: ahmedImage,
       facebookUrl: "https://www.facebook.com/ahmed.sameheyada.9",
       whatsappUrl: "https://wa.me/201066782086",
+    },
+    {
+      name: "عبد الكافي بدوي",
+      specialization: "نظم معلومات الأعمال (BIS)",
+      batch: "2022",
+      role: "جزء من رحلة Community NEWS",
+      photo: yamacImage,
+      facebookUrl: "https://www.facebook.com/YAMASH.ASSAF",
+      whatsappUrl: "https://wa.me/201016553416",
     },
     {
       name: "مريم عبد الله",
