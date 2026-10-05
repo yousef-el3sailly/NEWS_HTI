@@ -1,0 +1,184 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * NEWS — HTI Community Platform design system.
+ * Palette inspired by the NEWS logo: deep burgundy brown + warm cream.
+ * All colors use oklch. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cairo", ui-serif, Georgia, serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sand: var(--sand);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-soft: 0 1px 2px oklch(0.32 0.07 25 / 0.04), 0 8px 24px oklch(0.32 0.07 25 / 0.06);
+  --shadow-lifted: 0 2px 6px oklch(0.32 0.07 25 / 0.06), 0 18px 40px oklch(0.32 0.07 25 / 0.12);
+}
+
+:root {
+  --radius: 1rem;
+
+  --background: oklch(0.966 0.014 84.5);
+  --foreground: oklch(0.24 0.035 30);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.035 30);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.035 30);
+
+  --primary: oklch(0.318 0.075 22);
+  --primary-foreground: oklch(0.972 0.02 84);
+  --primary-soft: oklch(0.45 0.07 24);
+
+  --secondary: oklch(0.932 0.021 82);
+  --secondary-foreground: oklch(0.318 0.075 22);
+
+  --muted: oklch(0.938 0.017 83);
+  --muted-foreground: oklch(0.5 0.028 45);
+
+  --accent: oklch(0.9 0.032 76);
+  --accent-foreground: oklch(0.318 0.075 22);
+
+  --destructive: oklch(0.52 0.19 27);
+  --destructive-foreground: oklch(0.98 0.01 84);
+
+  --success: oklch(0.55 0.11 150);
+  --success-foreground: oklch(0.98 0.01 84);
+
+  --sand: oklch(0.916 0.026 80);
+
+  --border: oklch(0.878 0.021 78);
+  --input: oklch(0.878 0.021 78);
+  --ring: oklch(0.45 0.07 24);
+
+  --chart-1: oklch(0.318 0.075 22);
+  --chart-2: oklch(0.55 0.09 45);
+  --chart-3: oklch(0.7 0.06 75);
+  --chart-4: oklch(0.45 0.07 24);
+  --chart-5: oklch(0.82 0.04 80);
+
+  --sidebar: oklch(0.28 0.06 22);
+  --sidebar-foreground: oklch(0.94 0.02 84);
+  --sidebar-primary: oklch(0.9 0.032 76);
+  --sidebar-primary-foreground: oklch(0.28 0.06 22);
+  --sidebar-accent: oklch(0.35 0.06 22);
+  --sidebar-accent-foreground: oklch(0.96 0.015 84);
+  --sidebar-border: oklch(0.38 0.05 22);
+  --sidebar-ring: oklch(0.7 0.06 75);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+}
+
+@keyframes news-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-up {
+  animation: news-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility surface-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+/*
+ * Off-screen printable schedule sheet.
+ * html2canvas cannot parse oklch() colors, so every inherited color inside the
+ * export sheet is forced back to plain hex values.
+ */
+.export-sheet,
+.export-sheet * {
+  border-color: #ddcdb6;
+  outline-color: #ddcdb6;
+  text-decoration-color: #2b1b16;
+  caret-color: #2b1b16;
+  box-shadow: none;
+}
