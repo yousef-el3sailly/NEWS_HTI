@@ -425,7 +425,7 @@ function Home() {
             </Link>
           }
         />
-        <FoundersGrid limit={4} />
+        <FoundersGrid limit={6} />
         <div className="mt-8 flex justify-center">
           <Link
             to="/about"
