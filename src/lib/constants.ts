@@ -7,6 +7,8 @@ import ahmedImage from "@/assets/founders/ahmed.jpeg";
 import girlImage from "@/assets/founders/girl.png";
 import mohamedImage from "@/assets/founders/mohamed.jpeg";
 import yamacImage from "@/assets/founders/yamac.jpg";
+import haggerImage from "@/assets/founders/hager.jpeg";
+import eslamImage from "@/assets/founders/eslam.jpeg";
 export const SPECIALIZATIONS = [
   {
     id: "bis",
@@ -188,9 +190,18 @@ export const FOUNDERS: ReadonlyArray<{
       specialization: "المحاسبة والمراجعة (Accounting)",
       batch: "2024",
       role: "جزء من توسّع Community NEWS",
-      photo: girlImage,
+      photo: haggerImage,
       facebookUrl: "",
       whatsappUrl: "",
+    },
+    {
+      name: "اسلام محمد",
+      specialization: "التسويق",
+      batch: "2023",
+      role: "جزء من توسّع Community NEWS",
+      photo: eslamImage,
+      facebookUrl: "https://www.facebook.com/eslam.mohamed.892755",
+      whatsappUrl: "https://wa.me/201011696980",
     },
   ];
 
