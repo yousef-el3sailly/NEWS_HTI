@@ -176,7 +176,7 @@ export const FOUNDERS: ReadonlyArray<{
       photo: yasserImage,
       facebookUrl: "https://www.facebook.com/share/19pBje4wHt/",
       whatsappUrl: "https://wa.me/201050130985",
-      
+
     },
     {
       name: "رحمة محمد زهران",
