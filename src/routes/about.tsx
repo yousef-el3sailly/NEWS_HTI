@@ -7,13 +7,16 @@ import { FoundersGrid } from "@/components/founders/FoundersGrid";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "عن NEWS ومؤسسيها — مجتمع طلاب HTI" },
+      { title: "NEWS x UniCourses HTI — مجتمع طلاب HTI" },
       {
         name: "description",
-        content: "قصة NEWS، رسالتها، وفريق المؤسسين من طلاب المعهد العالي للتكنولوجيا.",
+        content: "تعرف على قصة NEWS x UniCourses HTI، رسالتها، وفريق المؤسسين من طلاب المعهد التكنولوجي العالي بمدينة العاشر من رمضان.",
       },
-      { property: "og:title", content: "عن NEWS ومؤسسيها" },
-      { property: "og:description", content: "قصة NEWS ورسالتها وفريق المؤسسين." },
+      {
+        property: "og:title",
+        content: "NEWS x UniCourses HTI — مجتمع طلاب HTI",
+      },
+      { property: "og:description", content: "قصة NEWS x UniCourses HTI ورسالتها وفريق المؤسسين." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -42,10 +45,10 @@ function AboutPage() {
         <div className="container-page relative flex flex-col items-center text-center">
           <Logo size={84} withText={false} />
           <h1 className="mt-6 text-3xl font-extrabold text-foreground sm:text-4xl">
-            NEWS — مجتمع طلاب HTI
+            NEWS x UniCourses HTI
           </h1>
           <p className="mt-4 max-w-2xl leading-loose text-muted-foreground">
-            بدأت NEWS كفكرة بسيطة بين مجموعة من طلاب المعهد التكنولوجي العالي بمدينة العاشر من رمضان، إيمانًا بأن المعلومة الأكاديمية لازم تكون متاحة ومنظمة للجميع. واليوم، أصبحت المنصة تجمع الأخبار والفعاليات، وتساعد الطلاب على بناء جداولهم الدراسية، وتوفر لهم مصادر المواد الدراسية في مكان واحد.
+            بدأت NEWS x UniCourses HTI كفكرة بسيطة بين مجموعة من طلاب المعهد التكنولوجي العالي بمدينة العاشر من رمضان، إيمانًا بأن المعلومة الأكاديمية لازم تكون متاحة ومنظمة للجميع. واليوم، أصبحت المنصة تجمع الأخبار والفعاليات، وتساعد الطلاب على بناء جداولهم الدراسية، وتوفر لهم مصادر المواد الدراسية في مكان واحد.
 
 
           </p>

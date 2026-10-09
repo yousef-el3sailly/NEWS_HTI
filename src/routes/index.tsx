@@ -37,12 +37,12 @@ import { Code2 } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NEWS — مجتمع طلاب HTI" },
+      { title: "NEWS x UniCourses HTI — مجتمع طلاب HTI" },
       {
         name: "description",
         content: "أخبار وفعاليات HTI، منشئ الجدول الدراسي، ومصادر المواد في منصة واحدة للطلاب.",
       },
-      { property: "og:title", content: "NEWS — مجتمع طلاب HTI" },
+      { property: "og:title", content: "NEWS x UniCourses HTI — مجتمع طلاب HTI" },
       {
         property: "og:description",
         content: "أخبار وفعاليات HTI، منشئ الجدول الدراسي، ومصادر المواد.",
