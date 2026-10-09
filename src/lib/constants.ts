@@ -9,6 +9,7 @@ import mohamedImage from "@/assets/founders/mohamed.jpeg";
 import yamacImage from "@/assets/founders/yamac.jpg";
 import haggerImage from "@/assets/founders/hager.jpeg";
 import eslamImage from "@/assets/founders/eslam.jpeg";
+import yasserImage from "@/assets/founders/yaseer.jpeg";
 export const SPECIALIZATIONS = [
   {
     id: "bis",
@@ -168,6 +169,16 @@ export const FOUNDERS: ReadonlyArray<{
       whatsappUrl: "",
     },
     {
+      name: "ياسر رأفت",
+      specialization: "المحاسبة والمراجعة (Accounting)",
+      batch: "2022",
+      role: "عضو في فريق إدارة Community NEWS",
+      photo: yasserImage,
+      facebookUrl: "https://www.facebook.com/share/19pBje4wHt/",
+      whatsappUrl: "https://wa.me/201050130985",
+      
+    },
+    {
       name: "رحمة محمد زهران",
       specialization: "نظم معلومات الأعمال (BIS)",
       batch: "2023",
@@ -198,7 +209,7 @@ export const FOUNDERS: ReadonlyArray<{
       name: "اسلام محمد",
       specialization: "التسويق",
       batch: "2023",
-      role: "جزء من توسّع Community NEWS",
+      role: "جزء من فريق Community NEWS",
       photo: eslamImage,
       facebookUrl: "https://www.facebook.com/eslam.mohamed.892755",
       whatsappUrl: "https://wa.me/201011696980",
