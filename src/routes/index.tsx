@@ -54,30 +54,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const QUICK_ACCESS = [
-  {
-    icon: Newspaper,
-    title: "أحدث الأخبار",
-    text: "تابع آخر أخبار وإعلانات وأحداث HTI أول بأول.",
-    to: "/news" as const,
-    cta: "استكشف الأخبار",
-  },
-  {
-    icon: CalendarRange,
-    title: "جدولك الدراسي",
-    text: "أنشئ جدولك الدراسي واحفظه وحمّله PNG أو PDF.",
-    to: "/schedule" as const,
-    cta: "أنشئ جدولك",
-  },
-  {
-    icon: GraduationCap,
-    title: "UniCourses",
-    text: "خطط دراسية، شجرة المواد، واللائحة في مكان واحد.",
-    to: "/unicourses" as const,
-    cta: "استكشف UniCourses",
-  },
-];
-
 const SPEC_ICONS: Record<string, LucideIcon> = {
   Database,
   Briefcase,
@@ -127,13 +103,15 @@ function Home() {
               <Logo size={88} withText={false} />
             </div>
             <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-bold text-primary-soft">
-              <Code2 className="size-3.5" />تم تطوير المنصة بواسطة Yousef Amin A El-Assaily
+              <Code2 className="size-3.5" />
+              تم تطوير المنصة بواسطة Yousef Amin A El-Assaily
             </span>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.15] text-foreground sm:text-5xl lg:text-6xl">
               مجتمع طلاب <span className="text-primary">HTI</span> في مكان واحد
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-loose text-muted-foreground lg:mx-0 lg:text-lg">
-              تابع جدولك وموادك، اعرف آخر أخبار وفعاليات المعهد، ووصل للمصادر والخطط الدراسية من مكان واحد.
+              تابع جدولك وموادك، اعرف آخر أخبار وفعاليات المعهد، ووصل للمصادر والخطط الدراسية من
+              مكان واحد.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
               <Link
@@ -157,38 +135,65 @@ function Home() {
         </div>
       </section>
 
-      {/* QUICK ACCESS */}
-      <section className="container-page py-16">
-        <SectionHeading
-          eyebrow="QUICK ACCESS"
-          title="وصول سريع"
-          description="أهم ثلاث خدمات في NEWS، على بعد ضغطة واحدة."
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          {QUICK_ACCESS.map((f, i) => (
-            <Link
-              key={f.title}
-              to={f.to}
-              className="surface-card group animate-fade-up relative overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[var(--shadow-lifted)]"
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <span
-                aria-hidden
-                className="absolute -end-10 -top-10 size-28 rounded-full bg-secondary transition-transform duration-500 group-hover:scale-150"
-              />
-              <span className="relative inline-flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground transition-transform duration-300 group-hover:scale-105">
-                <f.icon className="size-6" />
+      {/* DASHBOARD PROMO */}
+      <section className="bg-card/60 py-16">
+        <div className="container-page">
+          <div className="relative overflow-hidden rounded-3xl bg-sidebar px-6 py-12 text-center sm:px-12 lg:px-16 lg:py-16">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -start-16 -top-16 size-64 rounded-full bg-sidebar-accent/60 blur-2xl"
+            />
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -bottom-20 -end-20 size-72 rounded-full bg-sidebar-primary/30 blur-3xl"
+            />
+            <div className="relative mx-auto max-w-3xl">
+              <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-sidebar-primary text-sidebar-primary-foreground">
+                <LayoutDashboard className="size-6" />
               </span>
-              <h3 className="relative mt-5 text-xl font-extrabold text-foreground">{f.title}</h3>
-              <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">
-                {f.text}
+              <span className="mt-5 block text-xs font-bold tracking-wide text-sidebar-primary-foreground/80">
+                STUDENT DASHBOARD
+              </span>
+              <h2 className="mt-3 text-2xl font-extrabold text-sidebar-foreground sm:text-3xl lg:text-4xl">
+                داشبورد الطالب
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl leading-loose text-sidebar-foreground/75">
+                كل أدواتك الدراسية في مكان واحد — مهامك، جدولك، مواعيدك، ملاحظاتك وآخر الأخبار.
               </p>
-              <span className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-primary">
-                {f.cta}
-                <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
-              </span>
-            </Link>
-          ))}
+
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Link
+                  to="/dashboard"
+                  className="inline-flex items-center gap-2 rounded-full bg-sidebar-primary px-7 py-3.5 text-sm font-bold text-sidebar-primary-foreground transition-transform hover:-translate-y-0.5"
+                >
+                  اكتشف الداشبورد <ArrowLeft className="size-4" />
+                </Link>
+                <Link
+                  to="/auth"
+                  className="inline-flex items-center gap-2 rounded-full border border-sidebar-border px-7 py-3.5 text-sm font-bold text-sidebar-foreground transition-colors hover:bg-sidebar-accent"
+                >
+                  سجّل الدخول للبدء
+                </Link>
+              </div>
+
+              <div className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {[
+                  { label: "مهامك", icon: CheckSquare },
+                  { label: "جدولك", icon: CalendarRange },
+                  { label: "مواعيدك", icon: CalendarRange },
+                  { label: "ملاحظاتك", icon: ScrollText },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-sidebar-border/60 bg-sidebar-accent/40 px-3 py-4 text-sidebar-foreground"
+                  >
+                    <stat.icon className="size-5 text-sidebar-primary" />
+                    <span className="text-sm font-bold">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -344,68 +349,6 @@ function Home() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* DASHBOARD PROMO */}
-      <section className="border-t border-border bg-card/60 py-16">
-        <div className="container-page">
-          <div className="relative overflow-hidden rounded-3xl bg-sidebar px-6 py-12 text-center sm:px-12 lg:px-16 lg:py-16">
-            <span
-              aria-hidden
-              className="pointer-events-none absolute -start-16 -top-16 size-64 rounded-full bg-sidebar-accent/60 blur-2xl"
-            />
-            <span
-              aria-hidden
-              className="pointer-events-none absolute -bottom-20 -end-20 size-72 rounded-full bg-sidebar-primary/30 blur-3xl"
-            />
-            <div className="relative mx-auto max-w-3xl">
-              <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-sidebar-primary text-sidebar-primary-foreground">
-                <LayoutDashboard className="size-6" />
-              </span>
-              <span className="mt-5 block text-xs font-bold tracking-wide text-sidebar-primary-foreground/80">
-                STUDENT DASHBOARD
-              </span>
-              <h2 className="mt-3 text-2xl font-extrabold text-sidebar-foreground sm:text-3xl lg:text-4xl">
-                داشبورد الطالب
-              </h2>
-              <p className="mx-auto mt-3 max-w-xl leading-loose text-sidebar-foreground/75">
-                كل أدواتك الدراسية في مكان واحد — مهامك، جدولك، مواعيدك، ملاحظاتك وآخر الأخبار.
-              </p>
-
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <Link
-                  to="/dashboard"
-                  className="inline-flex items-center gap-2 rounded-full bg-sidebar-primary px-7 py-3.5 text-sm font-bold text-sidebar-primary-foreground transition-transform hover:-translate-y-0.5"
-                >
-                  اكتشف الداشبورد <ArrowLeft className="size-4" />
-                </Link>
-                <Link
-                  to="/auth"
-                  className="inline-flex items-center gap-2 rounded-full border border-sidebar-border px-7 py-3.5 text-sm font-bold text-sidebar-foreground transition-colors hover:bg-sidebar-accent"
-                >
-                  سجّل الدخول للبدء
-                </Link>
-              </div>
-
-              <div className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {[
-                  { label: "مهامك", icon: CheckSquare },
-                  { label: "جدولك", icon: CalendarRange },
-                  { label: "مواعيدك", icon: CalendarRange },
-                  { label: "ملاحظاتك", icon: ScrollText },
-                ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-sidebar-border/60 bg-sidebar-accent/40 px-3 py-4 text-sidebar-foreground"
-                  >
-                    <stat.icon className="size-5 text-sidebar-primary" />
-                    <span className="text-sm font-bold">{stat.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
