@@ -47,7 +47,6 @@ export const ExportSheet = forwardRef<
       dir="rtl"
       className="export-sheet"
       style={{
-
         width: 1180,
         padding: 28,
         background: C.cream,
@@ -69,7 +68,13 @@ export const ExportSheet = forwardRef<
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <img src={logo} alt="NEWS x UniCourses HTI" width={54} height={54} style={{ objectFit: "contain" }} />
+          <img
+            src={logo}
+            alt="NEWS x UniCourses HTI"
+            width={54}
+            height={54}
+            style={{ objectFit: "contain" }}
+          />
           <div>
             <div style={{ fontSize: 22, fontWeight: 800, color: C.primary, letterSpacing: 2 }}>
               NEWS
@@ -91,7 +96,14 @@ export const ExportSheet = forwardRef<
         </div>
       </div>
 
-      <table style={{ width: "100%", tableLayout: "fixed", borderCollapse: "separate", borderSpacing: 4 }}>
+      <table
+        style={{
+          width: "100%",
+          tableLayout: "fixed",
+          borderCollapse: "separate",
+          borderSpacing: 4,
+        }}
+      >
         <thead>
           <tr>
             <th
@@ -167,7 +179,9 @@ export const ExportSheet = forwardRef<
                           </div>
                         ) : null}
                         {entry.instructor_name ? (
-                          <div style={{ fontSize: 10, color: C.muted }}>{entry.instructor_name}</div>
+                          <div style={{ fontSize: 10, color: C.muted }}>
+                            {entry.instructor_name}
+                          </div>
                         ) : null}
                         {entry.room ? (
                           <div style={{ fontSize: 10, color: C.muted }}>قاعة {entry.room}</div>
@@ -194,5 +208,3 @@ export const ExportSheet = forwardRef<
     </div>
   );
 });
-
-

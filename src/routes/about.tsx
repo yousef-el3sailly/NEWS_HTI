@@ -10,7 +10,8 @@ export const Route = createFileRoute("/about")({
       { title: "NEWS x UniCourses HTI — مجتمع طلاب HTI" },
       {
         name: "description",
-        content: "تعرف على قصة NEWS x UniCourses HTI، رسالتها، وفريق المؤسسين من طلاب المعهد التكنولوجي العالي بمدينة العاشر من رمضان.",
+        content:
+          "تعرف على قصة NEWS x UniCourses HTI، رسالتها، وفريق المؤسسين من طلاب المعهد التكنولوجي العالي بمدينة العاشر من رمضان.",
       },
       {
         property: "og:title",
@@ -48,9 +49,10 @@ function AboutPage() {
             NEWS x UniCourses HTI
           </h1>
           <p className="mt-4 max-w-2xl leading-loose text-muted-foreground">
-            بدأت NEWS x UniCourses HTI كفكرة بسيطة بين مجموعة من طلاب المعهد التكنولوجي العالي بمدينة العاشر من رمضان، إيمانًا بأن المعلومة الأكاديمية لازم تكون متاحة ومنظمة للجميع. واليوم، أصبحت المنصة تجمع الأخبار والفعاليات، وتساعد الطلاب على بناء جداولهم الدراسية، وتوفر لهم مصادر المواد الدراسية في مكان واحد.
-
-
+            بدأت NEWS x UniCourses HTI كفكرة بسيطة بين مجموعة من طلاب المعهد التكنولوجي العالي
+            بمدينة العاشر من رمضان، إيمانًا بأن المعلومة الأكاديمية لازم تكون متاحة ومنظمة للجميع.
+            واليوم، أصبحت المنصة تجمع الأخبار والفعاليات، وتساعد الطلاب على بناء جداولهم الدراسية،
+            وتوفر لهم مصادر المواد الدراسية في مكان واحد.
           </p>
         </div>
       </section>
@@ -85,7 +87,9 @@ function AboutPage() {
       <section className="container-page">
         <div className="surface-card flex flex-wrap items-center justify-between gap-5 p-8">
           <div className="max-w-xl">
-            <h2 className="text-xl font-extrabold text-foreground">عايز تكون جزء من NEWS x UniCourses HTI؟</h2>
+            <h2 className="text-xl font-extrabold text-foreground">
+              عايز تكون جزء من NEWS x UniCourses HTI؟
+            </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               سجّل حسابك، احفظ جدولك الدراسي، وتابع كل الأخبار والفعاليات في مكان واحد.
             </p>

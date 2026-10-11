@@ -390,8 +390,9 @@ function Home() {
               مجتمع NEWS x UniCourses HTI — طلاب بيساعدوا طلاب
             </h2>
             <p className="mt-3 leading-loose text-muted-foreground">
-              NEWS x UniCourses HTI مش مجرد موقع أخبار؛ دي مساحة بيتشارك فيها طلاب HTI الخبرات والمصادر والتنظيم
-              الدراسي. سجّل حسابك علشان تحفظ جدولك، تحدّث ملفك الشخصي، وتتابع كل جديد.
+              NEWS x UniCourses HTI مش مجرد موقع أخبار؛ دي مساحة بيتشارك فيها طلاب HTI الخبرات
+              والمصادر والتنظيم الدراسي. سجّل حسابك علشان تحفظ جدولك، تحدّث ملفك الشخصي، وتتابع كل
+              جديد.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link

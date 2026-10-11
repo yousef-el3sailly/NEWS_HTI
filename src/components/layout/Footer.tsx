@@ -17,7 +17,8 @@ export function Footer() {
         <div className="space-y-4">
           <Logo size={48} />
           <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-           مجتمع طلاب المعهد التكنولوجي العالي (HTI) — كل أخبارك، جدولك، ومصادرك الدراسية في مكان واحد.
+            مجتمع طلاب المعهد التكنولوجي العالي (HTI) — كل أخبارك، جدولك، ومصادرك الدراسية في مكان
+            واحد.
           </p>
         </div>
 

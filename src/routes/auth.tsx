@@ -126,7 +126,9 @@ function AuthPage() {
       <div className="w-full max-w-md">
         <div className="mb-8 flex flex-col items-center text-center">
           <Logo size={64} withText={false} />
-          <h1 className="mt-4 text-2xl font-extrabold text-foreground">مرحباً بك في NEWS x UniCourses HTI</h1>
+          <h1 className="mt-4 text-2xl font-extrabold text-foreground">
+            مرحباً بك في NEWS x UniCourses HTI
+          </h1>
           <p className="mt-2 text-sm text-muted-foreground">
             انضم لمجتمع طلاب HTI وابدأ تنظّم دراستك.
           </p>
@@ -162,7 +164,11 @@ function AuthPage() {
                   />
                 </div>
                 <Button type="submit" className="w-full" disabled={busy}>
-                  {busy ? <Loader2 className="size-4 animate-spin" /> : <LogIn className="size-4" />}
+                  {busy ? (
+                    <Loader2 className="size-4 animate-spin" />
+                  ) : (
+                    <LogIn className="size-4" />
+                  )}
                   دخول
                 </Button>
               </form>
