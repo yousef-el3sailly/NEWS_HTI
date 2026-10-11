@@ -61,7 +61,7 @@ export function Footer() {
           <Code2 className="size-4 shrink-0 text-primary" />
           <span>تم تطوير المنصة بواسطة Yousef Amin A El-Assaily</span>
         </p>
-        <p className="mt-1">© NEWS Community — HTI</p>
+        <p className="mt-1">© NEWS x UniCourses HTI</p>
       </div>
     </footer>
   );

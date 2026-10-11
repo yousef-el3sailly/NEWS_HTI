@@ -262,7 +262,7 @@ function AuthPage() {
         <p className="mt-6 text-center text-xs text-muted-foreground">
           بالمتابعة أنت توافق على قواعد مجتمع{" "}
           <Link to="/about" className="font-semibold text-primary">
-            NEWS
+            NEWS x UniCourses HTI
           </Link>
           .
         </p>

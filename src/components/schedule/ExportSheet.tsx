@@ -69,12 +69,12 @@ export const ExportSheet = forwardRef<
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <img src={logo} alt="NEWS" width={54} height={54} style={{ objectFit: "contain" }} />
+          <img src={logo} alt="NEWS x UniCourses HTI" width={54} height={54} style={{ objectFit: "contain" }} />
           <div>
             <div style={{ fontSize: 22, fontWeight: 800, color: C.primary, letterSpacing: 2 }}>
               NEWS
             </div>
-            <div style={{ fontSize: 12, color: C.muted }}>مجتمع طلاب HTI</div>
+            <div style={{ fontSize: 12, color: C.muted }}>x UniCourses HTI</div>
           </div>
         </div>
 
