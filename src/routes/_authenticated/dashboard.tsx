@@ -111,6 +111,7 @@ function DashboardPage() {
       const { data, error } = await supabase
         .from("schedules")
         .select("id, slot, subject_name, group_number, instructor_name")
+        .eq("user_id", user!.id)
         .eq("day", todayIndex as number)
         .order("slot", { ascending: true });
       if (error) throw error;
