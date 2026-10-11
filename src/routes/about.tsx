@@ -76,7 +76,7 @@ function AboutPage() {
       <section className="container-page pb-12">
         <SectionHeading
           eyebrow="FOUNDERS"
-          title="مؤسسو NEWS"
+          title="مؤسسو NEWS x UniCourses HTI"
           description="فريق من طلاب المعهد من تخصصات ودفعات مختلفة"
         />
         <FoundersGrid />
@@ -85,7 +85,7 @@ function AboutPage() {
       <section className="container-page">
         <div className="surface-card flex flex-wrap items-center justify-between gap-5 p-8">
           <div className="max-w-xl">
-            <h2 className="text-xl font-extrabold text-foreground">عايز تكون جزء من NEWS؟</h2>
+            <h2 className="text-xl font-extrabold text-foreground">عايز تكون جزء من NEWS x UniCourses HTI؟</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               سجّل حسابك، احفظ جدولك الدراسي، وتابع كل الأخبار والفعاليات في مكان واحد.
             </p>

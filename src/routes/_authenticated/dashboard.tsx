@@ -41,13 +41,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
     meta: [
-      { title: "لوحتي — NEWS" },
+      { title: "لوحتي — NEWS x UniCourses HTI" },
       {
         name: "description",
-        content: "جدول اليوم، مهامك، مواعيدك القادمة وموادك في مكان واحد داخل NEWS.",
+        content: "جدول اليوم، مهامك، مواعيدك القادمة وموادك في مكان واحد داخل NEWS x UniCourses HTI.",
       },
-      { property: "og:title", content: "لوحتي — NEWS" },
-      { property: "og:description", content: "مركز الطالب الشخصي في منصة NEWS." },
+      { property: "og:title", content: "لوحتي — NEWS x UniCourses HTI" },
+      { property: "og:description", content: "مركز الطالب الشخصي في منصة NEWS x UniCourses HTI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

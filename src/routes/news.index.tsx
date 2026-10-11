@@ -17,12 +17,12 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/news/")({
   head: () => ({
     meta: [
-      { title: "الأخبار والأحداث — NEWS" },
+      { title: "الأخبار والأحداث — NEWS x UniCourses HTI" },
       {
         name: "description",
         content: "أحدث أخبار وفعاليات وإعلانات طلاب HTI، مع بحث وتصنيفات لكل ما يهمك.",
       },
-      { property: "og:title", content: "الأخبار والأحداث — NEWS" },
+      { property: "og:title", content: "الأخبار والأحداث — NEWS x UniCourses HTI" },
       { property: "og:description", content: "أحدث أخبار وفعاليات وإعلانات طلاب HTI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

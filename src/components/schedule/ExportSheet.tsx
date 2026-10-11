@@ -189,7 +189,7 @@ export const ExportSheet = forwardRef<
             تم تطوير المنصة بواسطة Yousef Amin A El-Assaily
           </span>
         </p>
-        تم إنشاء هذا الجدول عبر منصة NEWS — مجتمع طلاب HTI
+        تم إنشاء هذا الجدول عبر منصة NEWS x UniCourses HTI — مجتمع طلاب HTI
       </div>
     </div>
   );

@@ -357,14 +357,14 @@ function Home() {
       <section className="container-page py-16">
         <SectionHeading
           eyebrow="FOUNDERS"
-          title="مؤسسو NEWS"
+          title="مؤسسو NEWS x UniCourses HTI"
           description="من فكرة بسيطة، لمنصة بتكبر لخدمة طلاب المعهد."
           action={
             <Link
               to="/about"
               className="inline-flex items-center gap-1.5 rounded-full border border-input bg-card px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-secondary"
             >
-              عن NEWS <ArrowLeft className="size-4" />
+              عن NEWS x UniCourses HTI <ArrowLeft className="size-4" />
             </Link>
           }
         />
@@ -387,10 +387,10 @@ function Home() {
               <Users className="size-6" />
             </span>
             <h2 className="mt-5 text-2xl font-extrabold text-foreground sm:text-3xl">
-              مجتمع NEWS — طلاب بيساعدوا طلاب
+              مجتمع NEWS x UniCourses HTI — طلاب بيساعدوا طلاب
             </h2>
             <p className="mt-3 leading-loose text-muted-foreground">
-              NEWS مش مجرد موقع أخبار؛ دي مساحة بيتشارك فيها طلاب HTI الخبرات والمصادر والتنظيم
+              NEWS x UniCourses HTI مش مجرد موقع أخبار؛ دي مساحة بيتشارك فيها طلاب HTI الخبرات والمصادر والتنظيم
               الدراسي. سجّل حسابك علشان تحفظ جدولك، تحدّث ملفك الشخصي، وتتابع كل جديد.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -398,7 +398,7 @@ function Home() {
                 to="/auth"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"
               >
-                انضم لمجتمع NEWS <ArrowLeft className="size-4" />
+                انضم لمجتمع NEWS x UniCourses HTI <ArrowLeft className="size-4" />
               </Link>
               <Link
                 to="/about"

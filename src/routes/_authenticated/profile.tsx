@@ -22,9 +22,9 @@ import {
 export const Route = createFileRoute("/_authenticated/profile")({
   head: () => ({
     meta: [
-      { title: "ملفي الشخصي — NEWS" },
-      { name: "description", content: "حدّث بياناتك الدراسية وصورتك الشخصية في مجتمع NEWS." },
-      { property: "og:title", content: "ملفي الشخصي — NEWS" },
+      { title: "ملفي الشخصي — NEWS x UniCourses HTI" },
+      { name: "description", content: "حدّث بياناتك الدراسية وصورتك الشخصية في مجتمع NEWS x UniCourses HTI." },
+      { property: "og:title", content: "ملفي الشخصي — NEWS x UniCourses HTI" },
       { property: "og:description", content: "حدّث بياناتك الدراسية وصورتك الشخصية." },
     ],
   }),
@@ -108,7 +108,7 @@ function ProfilePage() {
   return (
     <div className="container-page max-w-2xl py-12">
       <h1 className="text-3xl font-extrabold text-foreground">ملفي الشخصي</h1>
-      <p className="mt-2 text-muted-foreground">بياناتك بتظهر في مجتمع NEWS وبتساعدنا نخصّص المحتوى.</p>
+      <p className="mt-2 text-muted-foreground">بياناتك بتظهر في مجتمع NEWS x UniCourses HTI وبتساعدنا نخصّص المحتوى.</p>
 
       <div className="surface-card mt-8 p-6">
         <div className="mb-8 flex items-center gap-4">

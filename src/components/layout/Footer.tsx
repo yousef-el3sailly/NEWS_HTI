@@ -7,7 +7,7 @@ const QUICK = [
   { to: "/news", label: "الأخبار" },
   { to: "/schedule", label: "الجدول الدراسي" },
   { to: "/unicourses", label: "UniCourses" },
-  { to: "/about", label: "عن NEWS" },
+  { to: "/about", label: "عن NEWS x UniCourses HTI" },
 ] as const;
 
 export function Footer() {
