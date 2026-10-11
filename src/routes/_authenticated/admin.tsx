@@ -54,10 +54,10 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
-      { title: "لوحة التحكم — NEWS" },
-      { name: "description", content: "إدارة الأخبار والمستخدمين في منصة NEWS." },
-      { property: "og:title", content: "لوحة التحكم — NEWS" },
-      { property: "og:description", content: "إدارة الأخبار والمستخدمين في منصة NEWS." },
+      { title: "لوحة التحكم — NEWS x UniCourses HTI" },
+      { name: "description", content: "إدارة الأخبار والمستخدمين في منصة NEWS x UniCourses HTI." },
+      { property: "og:title", content: "لوحة التحكم — NEWS x UniCourses HTI" },
+      { property: "og:description", content: "إدارة الأخبار والمستخدمين في منصة NEWS x UniCourses HTI." },
     ],
   }),
   component: AdminPage,
@@ -318,7 +318,7 @@ function AdminPage() {
               لوحة التحكم
             </h1>
             <p className="truncate text-sm text-muted-foreground">
-              أهلاً {profile?.full_name || "مشرف NEWS"}
+              أهلاً {profile?.full_name || "مشرف NEWS x UniCourses HTI"}
             </p>
           </div>
         </div>
@@ -604,7 +604,7 @@ function AdminPage() {
               <div className="border-b border-border px-6 py-4">
                 <h2 className="text-lg font-bold text-foreground">المستخدمون</h2>
                 <p className="text-sm text-muted-foreground">
-                  كل الحسابات المسجلة في منصة NEWS.
+                  كل الحسابات المسجلة في منصة NEWS x UniCourses HTI.
                 </p>
               </div>
               {usersQuery.isLoading ? (

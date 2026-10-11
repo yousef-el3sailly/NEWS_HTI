@@ -24,12 +24,12 @@ import { ExportSheet } from "@/components/schedule/ExportSheet";
 export const Route = createFileRoute("/schedule")({
   head: () => ({
     meta: [
-      { title: "الجدول الدراسي — NEWS" },
+      { title: "الجدول الدراسي — NEWS x UniCourses HTI" },
       {
         name: "description",
         content: "ابنِ جدولك الدراسي بـ10 محاضرات يومياً، واحفظه أو صدّره كصورة أو PDF.",
       },
-      { property: "og:title", content: "الجدول الدراسي — NEWS" },
+      { property: "og:title", content: "الجدول الدراسي — NEWS x UniCourses HTI" },
       { property: "og:description", content: "منشئ الجدول الدراسي لطلاب HTI." },
     ],
   }),

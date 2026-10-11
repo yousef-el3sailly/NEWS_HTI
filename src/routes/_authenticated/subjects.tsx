@@ -16,10 +16,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 export const Route = createFileRoute("/_authenticated/subjects")({
   head: () => ({
     meta: [
-      { title: "موادي — NEWS" },
+      { title: "موادي — NEWS x UniCourses HTI" },
       { name: "description", content: "أضف وعدّل موادك الدراسية واربطها بمهامك وملاحظاتك." },
-      { property: "og:title", content: "موادي — NEWS" },
-      { property: "og:description", content: "إدارة المواد الدراسية داخل منصة NEWS." },
+      { property: "og:title", content: "موادي — NEWS x UniCourses HTI" },
+      { property: "og:description", content: "إدارة المواد الدراسية داخل منصة NEWS x UniCourses HTI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

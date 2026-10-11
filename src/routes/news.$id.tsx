@@ -11,9 +11,9 @@ import type { NewsItem } from "@/components/news/NewsCard";
 export const Route = createFileRoute("/news/$id")({
   head: () => ({
     meta: [
-      { title: "تفاصيل الخبر — NEWS" },
+      { title: "تفاصيل الخبر — NEWS x UniCourses HTI" },
       { name: "description", content: "تفاصيل الخبر أو الفعالية من مجتمع طلاب HTI." },
-      { property: "og:title", content: "تفاصيل الخبر — NEWS" },
+      { property: "og:title", content: "تفاصيل الخبر — NEWS x UniCourses HTI" },
       { property: "og:description", content: "تفاصيل الخبر أو الفعالية من مجتمع طلاب HTI." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },

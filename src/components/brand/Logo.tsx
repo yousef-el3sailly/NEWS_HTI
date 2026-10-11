@@ -16,7 +16,7 @@ export function Logo({
     <span className={cn("inline-flex items-center gap-2", className)}>
       <img
         src={logo}
-        alt="شعار NEWS"
+        alt="شعار NEWS x UniCourses HTI"
         width={size}
         height={size}
         className="shrink-0 object-contain"
@@ -38,7 +38,7 @@ export function Logo({
               tone === "inverted" ? "text-sidebar-foreground/70" : "text-muted-foreground",
             )}
           >
-            مجتمع طلاب HTI
+            x UniCourses HTI
           </span>
         </span>
       )}

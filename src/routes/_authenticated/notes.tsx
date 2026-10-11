@@ -17,10 +17,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 export const Route = createFileRoute("/_authenticated/notes")({
   head: () => ({
     meta: [
-      { title: "ملاحظاتي — NEWS" },
+      { title: "ملاحظاتي — NEWS x UniCourses HTI" },
       { name: "description", content: "دوّن ملاحظات محاضراتك واربطها بموادك الدراسية." },
-      { property: "og:title", content: "ملاحظاتي — NEWS" },
-      { property: "og:description", content: "ملاحظات المحاضرات داخل منصة NEWS." },
+      { property: "og:title", content: "ملاحظاتي — NEWS x UniCourses HTI" },
+      { property: "og:description", content: "ملاحظات المحاضرات داخل منصة NEWS x UniCourses HTI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

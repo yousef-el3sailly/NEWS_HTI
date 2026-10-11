@@ -83,12 +83,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NEWS — مجتمع طلاب HTI" },
+      { title: "NEWS x UniCourses HTI — مجتمع طلاب HTI" },
       {
         name: "description",
         content: "كل أخبارك، جداولك، ومصادرك الدراسية في مكان واحد — مجتمع طلاب HTI.",
       },
-      { property: "og:title", content: "NEWS — مجتمع طلاب HTI" },
+      { property: "og:title", content: "NEWS x UniCourses HTI — مجتمع طلاب HTI" },
       { property: "og:description", content: "أخبار وفعاليات وجدول دراسي ومصادر UniCourses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

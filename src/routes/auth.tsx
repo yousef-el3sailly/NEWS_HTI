@@ -24,9 +24,9 @@ import {
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "تسجيل الدخول — NEWS" },
+      { title: "تسجيل الدخول — NEWS x UniCourses HTI" },
       { name: "description", content: "سجّل دخولك أو أنشئ حسابك في مجتمع طلاب HTI." },
-      { property: "og:title", content: "تسجيل الدخول — NEWS" },
+      { property: "og:title", content: "تسجيل الدخول — NEWS x UniCourses HTI" },
       { property: "og:description", content: "سجّل دخولك أو أنشئ حسابك في مجتمع طلاب HTI." },
     ],
   }),
@@ -126,7 +126,9 @@ function AuthPage() {
       <div className="w-full max-w-md">
         <div className="mb-8 flex flex-col items-center text-center">
           <Logo size={64} withText={false} />
-          <h1 className="mt-4 text-2xl font-extrabold text-foreground">مرحباً بك في NEWS</h1>
+          <h1 className="mt-4 text-2xl font-extrabold text-foreground">
+            مرحباً بك في NEWS x UniCourses HTI
+          </h1>
           <p className="mt-2 text-sm text-muted-foreground">
             انضم لمجتمع طلاب HTI وابدأ تنظّم دراستك.
           </p>
@@ -162,7 +164,11 @@ function AuthPage() {
                   />
                 </div>
                 <Button type="submit" className="w-full" disabled={busy}>
-                  {busy ? <Loader2 className="size-4 animate-spin" /> : <LogIn className="size-4" />}
+                  {busy ? (
+                    <Loader2 className="size-4 animate-spin" />
+                  ) : (
+                    <LogIn className="size-4" />
+                  )}
                   دخول
                 </Button>
               </form>
@@ -262,7 +268,7 @@ function AuthPage() {
         <p className="mt-6 text-center text-xs text-muted-foreground">
           بالمتابعة أنت توافق على قواعد مجتمع{" "}
           <Link to="/about" className="font-semibold text-primary">
-            NEWS
+            NEWS x UniCourses HTI
           </Link>
           .
         </p>

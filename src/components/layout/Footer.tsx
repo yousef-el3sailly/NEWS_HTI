@@ -7,7 +7,7 @@ const QUICK = [
   { to: "/news", label: "الأخبار" },
   { to: "/schedule", label: "الجدول الدراسي" },
   { to: "/unicourses", label: "UniCourses" },
-  { to: "/about", label: "عن NEWS" },
+  { to: "/about", label: "عن NEWS x UniCourses HTI" },
 ] as const;
 
 export function Footer() {
@@ -17,7 +17,8 @@ export function Footer() {
         <div className="space-y-4">
           <Logo size={48} />
           <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-           مجتمع طلاب المعهد التكنولوجي العالي (HTI) — كل أخبارك، جدولك، ومصادرك الدراسية في مكان واحد.
+            مجتمع طلاب المعهد التكنولوجي العالي (HTI) — كل أخبارك، جدولك، ومصادرك الدراسية في مكان
+            واحد.
           </p>
         </div>
 
@@ -61,7 +62,7 @@ export function Footer() {
           <Code2 className="size-4 shrink-0 text-primary" />
           <span>تم تطوير المنصة بواسطة Yousef Amin A El-Assaily</span>
         </p>
-        <p className="mt-1">© NEWS Community — HTI</p>
+        <p className="mt-1">© NEWS x UniCourses HTI</p>
       </div>
     </footer>
   );
