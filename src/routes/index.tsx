@@ -135,6 +135,50 @@ function Home() {
         </div>
       </section>
 
+      {/* LATEST NEWS */}
+      <section className="border-y border-border bg-card/60 py-16">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="NEWS & EVENTS"
+            title="أحدث الأخبار والأحداث"
+            description="كل الإعلانات الأكاديمية والأنشطة الطلابية، محدّثة أول بأول."
+            action={
+              <Link
+                to="/news"
+                className="inline-flex items-center gap-1.5 rounded-full border border-input bg-card px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-secondary"
+              >
+                عرض كل الأخبار <ArrowLeft className="size-4" />
+              </Link>
+            }
+          />
+          {isLoading ? (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <Skeleton key={i} className="h-80 rounded-2xl" />
+              ))}
+            </div>
+          ) : (data?.length ?? 0) === 0 ? (
+            <EmptyState
+              icon={Newspaper}
+              title="لا توجد أخبار حالياً"
+              description="أول ما يتنشر خبر أو فعالية جديدة هتلاقيها هنا مباشرة."
+            />
+          ) : (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {data?.map((item, i) => (
+                <div
+                  key={item.id}
+                  className="animate-fade-up"
+                  style={{ animationDelay: `${i * 70}ms` }}
+                >
+                  <NewsCard item={item} />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* DASHBOARD PROMO */}
       <section className="bg-card/60 py-16">
         <div className="container-page">
@@ -194,50 +238,6 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* LATEST NEWS */}
-      <section className="border-y border-border bg-card/60 py-16">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="NEWS & EVENTS"
-            title="أحدث الأخبار والأحداث"
-            description="كل الإعلانات الأكاديمية والأنشطة الطلابية، محدّثة أول بأول."
-            action={
-              <Link
-                to="/news"
-                className="inline-flex items-center gap-1.5 rounded-full border border-input bg-card px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-secondary"
-              >
-                عرض كل الأخبار <ArrowLeft className="size-4" />
-              </Link>
-            }
-          />
-          {isLoading ? (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <Skeleton key={i} className="h-80 rounded-2xl" />
-              ))}
-            </div>
-          ) : (data?.length ?? 0) === 0 ? (
-            <EmptyState
-              icon={Newspaper}
-              title="لا توجد أخبار حالياً"
-              description="أول ما يتنشر خبر أو فعالية جديدة هتلاقيها هنا مباشرة."
-            />
-          ) : (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {data?.map((item, i) => (
-                <div
-                  key={item.id}
-                  className="animate-fade-up"
-                  style={{ animationDelay: `${i * 70}ms` }}
-                >
-                  <NewsCard item={item} />
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
@@ -364,7 +364,7 @@ function Home() {
               to="/about"
               className="inline-flex items-center gap-1.5 rounded-full border border-input bg-card px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-secondary"
             >
-           اعرف القصة<ArrowLeft className="size-4" />
+              اعرف القصة<ArrowLeft className="size-4" />
             </Link>
           }
         />
@@ -374,7 +374,7 @@ function Home() {
             to="/about"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-           اعرف القصة<ArrowLeft className="size-4" />
+            اعرف القصة<ArrowLeft className="size-4" />
           </Link>
         </div>
       </section>
