@@ -76,10 +76,26 @@ export const ExportSheet = forwardRef<
             style={{ objectFit: "contain" }}
           />
           <div>
-            <div style={{ fontSize: 22, fontWeight: 800, color: C.primary, letterSpacing: 2 }}>
-              NEWS
+            <div
+              style={{
+                fontSize: 22,
+                fontWeight: 800,
+                color: C.primary,
+                letterSpacing: 1.5,
+              }}
+            >
+              NEWS x UniCourses
             </div>
-            <div style={{ fontSize: 12, color: C.muted }}>x UniCourses HTI</div>
+
+            <div
+              style={{
+                fontSize: 11,
+                color: C.muted,
+                marginTop: 4,
+              }}
+            >
+              مجتمع طلاب HTI
+            </div>
           </div>
         </div>
 
@@ -197,8 +213,23 @@ export const ExportSheet = forwardRef<
       </table>
 
       <div style={{ marginTop: 14, fontSize: 11, color: C.muted, textAlign: "center" }}>
-        <p className="flex flex-wrap items-center justify-center gap-1.5">
-          <Code2 className="size-4 shrink-0 text-primary" />
+        <p
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 6,
+            margin: 0,
+          }}
+        >
+          <Code2
+            size={16}
+            style={{
+              flexShrink: 0,
+              color: C.primary,
+            }}
+          />
           <span style={{ color: C.primarySoft, fontWeight: 700 }}>
             تم تطوير المنصة بواسطة Yousef Amin A El-Assaily
           </span>
