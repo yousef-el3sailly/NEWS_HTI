@@ -5,7 +5,6 @@ import {
   GraduationCap,
   HeartHandshake,
   Newspaper,
-  Sparkles,
   Users,
 } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
@@ -72,8 +71,8 @@ function AboutPage() {
             className="mt-7 inline-flex animate-fade-up items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-bold text-muted-foreground shadow-sm"
             style={{ animationDelay: "60ms" }}
           >
-            <Sparkles className="size-3.5 text-primary" />
-            قصتنا
+
+            رحلة مشروعين
           </span>
           <h1
             className="mt-4 animate-fade-up text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl"
@@ -100,33 +99,6 @@ function AboutPage() {
       {/* ===== القصة: فصلان ثم اللقاء ===== */}
       <section className="container-page py-14 sm:py-16">
         <div className="grid items-stretch gap-6 lg:grid-cols-2">
-          {/* NEWS Community */}
-          <article className="surface-card group relative animate-fade-up overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-lifted)] sm:p-9">
-            <span
-              aria-hidden
-              className="pointer-events-none absolute -end-10 -top-10 size-36 rounded-full bg-primary/5 blur-2xl transition-all duration-500 group-hover:bg-primary/10"
-            />
-            <div className="relative">
-              <div className="flex items-center justify-between gap-3">
-                <span className="inline-flex size-13 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm">
-                  <Newspaper className="size-6" />
-                </span>
-                <ChapterBadge n="01" />
-              </div>
-              <h2 className="mt-5 text-2xl font-extrabold text-foreground">NEWS Community</h2>
-              <p className="mt-1.5 text-sm font-bold text-primary">الجانب المجتمعي والإخباري</p>
-              <p className="mt-4 leading-loose text-muted-foreground">
-                بدأت NEWS كـ Community طلابي هدفه جمع طلاب HTI وتوفير مساحة للتواصل ومشاركة
-                الأخبار والإعلانات والمعلومات والفعاليات التي تهم الطلاب.
-              </p>
-              <p className="mt-3 leading-loose text-muted-foreground">
-                وكانت انطلاقة Community NEWS على يد{" "}
-                <span className="font-bold text-foreground">بكري مصعب</span>، ومع الوقت أصبح
-                المجتمع مساحة يشارك فيها طلاب من تخصصات ودفعات مختلفة.
-              </p>
-            </div>
-          </article>
-
           {/* UniCourses HTI */}
           <article
             className="surface-card group relative animate-fade-up overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-lifted)] sm:p-9"
@@ -141,19 +113,46 @@ function AboutPage() {
                 <span className="inline-flex size-13 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm">
                   <GraduationCap className="size-6" />
                 </span>
-                <ChapterBadge n="02" />
+                <ChapterBadge n="01" />
               </div>
               <h2 className="mt-5 text-2xl font-extrabold text-foreground">UniCourses HTI</h2>
-              <p className="mt-1.5 text-sm font-bold text-primary">الجانب الأكاديمي والمصادر</p>
+              <p className="mt-1.5 text-sm font-bold text-primary">المنصة الأكاديمية الرقمية</p>
               <p className="mt-4 leading-loose text-muted-foreground">
-                وفي جانب آخر، بدأت UniCourses HTI كمنصة أكاديمية مستقلة تهدف إلى تنظيم وتجميع
+                بدأت UniCourses HTI كمنصة أكاديمية مستقلة تهدف إلى تنظيم وتجميع
                 المحتوى الأكاديمي الذي يحتاجه طلاب HTI، مثل الخطط الدراسية، الـ Flowcharts،
                 المواد والمصادر التعليمية والتدريب الصيفي.
               </p>
               <p className="mt-3 leading-loose text-muted-foreground">
                 بدأت UniCourses وتطورت بشكل مستقل على يد{" "}
-                <span className="font-bold text-foreground">يوسف العسيلي</span>، قبل ظهور الموقع
-                الحالي. وقد احتفظت UniCourses بهويتها كمنصة أكاديمية مخصصة لرحلة الطالب الدراسية.
+                <span className="font-bold text-foreground">يوسف العسيلي</span>، قبل الشراكة الحالية مع NEWS Community
+                . وقد احتفظت UniCourses بهويتها كمنصة أكاديمية مخصصة لرحلة الطالب الدراسية.
+              </p>
+            </div>
+          </article>
+
+          {/* NEWS Community */}
+          <article className="surface-card group relative animate-fade-up overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-lifted)] sm:p-9">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -end-10 -top-10 size-36 rounded-full bg-primary/5 blur-2xl transition-all duration-500 group-hover:bg-primary/10"
+            />
+            <div className="relative">
+              <div className="flex items-center justify-between gap-3">
+                <span className="inline-flex size-13 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm">
+                  <Newspaper className="size-6" />
+                </span>
+                <ChapterBadge n="02" />
+              </div>
+              <h2 className="mt-5 text-2xl font-extrabold text-foreground">NEWS Community</h2>
+              <p className="mt-1.5 text-sm font-bold text-primary">المجتمع الطلابي والتواصل</p>
+              <p className="mt-4 leading-loose text-muted-foreground">
+                بدأت NEWS كـ Community طلابي هدفه جمع طلاب HTI وتوفير مساحة للتواصل ومشاركة
+                الأخبار والإعلانات والمعلومات والفعاليات التي تهم الطلاب.
+              </p>
+              <p className="mt-3 leading-loose text-muted-foreground">
+                وكانت انطلاقة Community NEWS على يد{" "}
+                <span className="font-bold text-foreground">بكري مصعب</span>، ومع الوقت أصبح
+                المجتمع مساحة يشارك فيها طلاب من تخصصات ودفعات مختلفة.
               </p>
             </div>
           </article>
@@ -178,12 +177,12 @@ function AboutPage() {
             <div className="min-w-0">
               <p className="leading-loose text-muted-foreground">
                 من هنا جاءت فكرة الموقع الحالي. بدل أن يعمل كل مشروع بشكل منفصل، تم التعاون بين
-                NEWS Community و UniCourses HTI لإنشاء منصة تجمع الجانب المجتمعي والإخباري مع
-                الجانب الأكاديمي في تجربة واحدة.
+                NEWS Community و UniCourses HTI لإنشاء منصة تجمع الجانب الاكاديمي والإخباري مع
+                الجانب الرقمي في تجربة واحدة.
               </p>
               <p className="mt-3 leading-loose text-muted-foreground">
                 NEWS تمثل الجانب المجتمعي والأخبار والتواصل بين الطلاب، بينما تمثل UniCourses
-                الجانب الأكاديمي والمصادر والخطط الدراسية. وبذلك أصبح NEWS x UniCourses HTI مساحة
+                الجانب الرقمي والمصادر والخطط الدراسية. وبذلك أصبح NEWS x UniCourses HTI مساحة
                 واحدة تجمع ما يحتاجه الطالب خلال رحلته الجامعية،{" "}
                 <span className="font-bold text-foreground">
                   مع الحفاظ على هوية وتاريخ كل مشروع من المشروعين.
@@ -222,32 +221,13 @@ function AboutPage() {
       <section className="container-page pb-14 sm:pb-16">
         <SectionHeading
           eyebrow="FOUNDERS"
-          title="مؤسسو NEWS"
-          description="فريق من الطلاب الذين ساهموا في تأسيس Community NEWS وتطويره عبر الدفعات والتخصصات المختلفة."
+          title="صُنّاع الحكاية"
+          description="الأشخاص الذين كانت لهم بصمة في بداية NEWS و UniCourses HTI"
         />
         <FoundersGrid />
       </section>
 
-      {/* ===== مؤسس UniCourses ===== */}
-      <section className="container-page pb-14 sm:pb-16">
-        <SectionHeading eyebrow="UNICOURSES" title="مؤسس UniCourses" />
-        <div className="surface-card group relative mx-auto max-w-2xl animate-fade-up overflow-hidden p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-lifted)] sm:p-10">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute -top-16 start-1/2 size-44 -translate-x-1/2 rounded-full bg-accent/40 blur-3xl"
-          />
-          <div className="relative">
-            <span className="mx-auto inline-flex size-16 items-center justify-center rounded-2xl bg-primary text-2xl font-extrabold text-primary-foreground shadow-sm">
-              ي
-            </span>
-            <h3 className="mt-5 text-2xl font-extrabold text-foreground">يوسف العسيلي</h3>
-            <p className="mt-4 leading-loose text-muted-foreground">
-              مؤسس ومطور UniCourses HTI، وساهم في تطوير التجربة الرقمية والمنصة الحالية وربط
-              UniCourses بمشروع NEWS ضمن الشراكة الحالية.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* ===== الشراكة ===== */}
       <section className="container-page pb-14 sm:pb-16">

@@ -357,14 +357,14 @@ function Home() {
       <section className="container-page py-16">
         <SectionHeading
           eyebrow="FOUNDERS"
-          title="مؤسسو NEWS x UniCourses HTI"
-          description="من فكرة بسيطة، لمنصة بتكبر لخدمة طلاب المعهد."
+          title="صُنّاع الحكاية"
+          description="الأشخاص الذين كانت لهم بصمة في بداية NEWS و UniCourses HTI"
           action={
             <Link
               to="/about"
               className="inline-flex items-center gap-1.5 rounded-full border border-input bg-card px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-secondary"
             >
-              عن NEWS x UniCourses HTI <ArrowLeft className="size-4" />
+           اعرف القصة<ArrowLeft className="size-4" />
             </Link>
           }
         />
@@ -374,7 +374,7 @@ function Home() {
             to="/about"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-            تعرف على المزيد <ArrowLeft className="size-4" />
+           اعرف القصة<ArrowLeft className="size-4" />
           </Link>
         </div>
       </section>

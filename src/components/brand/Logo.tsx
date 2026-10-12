@@ -22,23 +22,29 @@ export function Logo({
         className="shrink-0 object-contain"
         style={{ width: size, height: size }}
       />
+
       {withText && (
-        <span className="flex flex-col leading-none">
+        <span className="flex min-w-0 flex-col leading-none">
           <span
             className={cn(
-              "text-lg font-extrabold tracking-[0.18em]",
-              tone === "inverted" ? "text-sidebar-foreground" : "text-primary",
+              "whitespace-nowrap text-sm font-extrabold tracking-[0.06em] sm:text-base lg:text-lg",
+              tone === "inverted"
+                ? "text-sidebar-foreground"
+                : "text-primary",
             )}
           >
-            NEWS
+            NEWS x UniCourses
           </span>
+
           <span
             className={cn(
-              "text-[10px] font-medium",
-              tone === "inverted" ? "text-sidebar-foreground/70" : "text-muted-foreground",
+              "mt-1 text-[9px] font-medium sm:text-[10px]",
+              tone === "inverted"
+                ? "text-sidebar-foreground/70"
+                : "text-muted-foreground",
             )}
           >
-            x UniCourses HTI
+            مجتمع طلاب HTI
           </span>
         </span>
       )}
