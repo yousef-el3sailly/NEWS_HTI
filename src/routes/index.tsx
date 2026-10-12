@@ -387,7 +387,7 @@ function Home() {
               <Users className="size-6" />
             </span>
             <h2 className="mt-5 text-2xl font-extrabold text-foreground sm:text-3xl">
-              مجتمع NEWS x UniCourses HTI — طلاب بيساعدوا طلاب
+              مجتمع NEWS x UniCourses HTI
             </h2>
             <p className="mt-3 leading-loose text-muted-foreground">
               NEWS x UniCourses HTI مش مجرد موقع أخبار؛ دي مساحة بيتشارك فيها طلاب HTI الخبرات
