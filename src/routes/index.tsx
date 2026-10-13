@@ -364,7 +364,8 @@ function Home() {
               to="/about"
               className="inline-flex items-center gap-1.5 rounded-full border border-input bg-card px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-secondary"
             >
-           اعرف القصة<ArrowLeft className="size-4" />
+              اعرف القصة
+              <ArrowLeft className="size-4" />
             </Link>
           }
         />
@@ -374,7 +375,8 @@ function Home() {
             to="/about"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-           اعرف القصة<ArrowLeft className="size-4" />
+            اعرف القصة
+            <ArrowLeft className="size-4" />
           </Link>
         </div>
       </section>
