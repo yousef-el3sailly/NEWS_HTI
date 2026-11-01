@@ -26,8 +26,9 @@ export function Logo({
       {withText && (
         <span className="flex min-w-0 flex-col leading-none">
           <span
+            dir="ltr"
             className={cn(
-              "flex items-baseline gap-[0.22em] whitespace-nowrap text-[13px] font-extrabold tracking-[0.04em] sm:text-base lg:text-lg",
+              "flex items-baseline justify-end gap-[0.22em] whitespace-nowrap text-[13px] font-extrabold tracking-[0.04em] sm:text-base lg:text-lg",
               tone === "inverted" ? "text-sidebar-foreground" : "text-primary",
             )}
           >
