@@ -13,7 +13,7 @@ export function Logo({
   tone?: "default" | "inverted";
 }) {
   return (
-    <span className={cn("inline-flex items-center gap-2", className)}>
+    <span className={cn("inline-flex min-w-0 items-center gap-1.5 sm:gap-2", className)}>
       <img
         src={logo}
         alt="شعار NEWS x UniCourses HTI"
@@ -26,22 +26,29 @@ export function Logo({
       {withText && (
         <span className="flex min-w-0 flex-col leading-none">
           <span
+            dir="ltr"
             className={cn(
-              "whitespace-nowrap text-sm font-extrabold tracking-[0.06em] sm:text-base lg:text-lg",
-              tone === "inverted"
-                ? "text-sidebar-foreground"
-                : "text-primary",
+              "flex items-baseline justify-end gap-[0.22em] whitespace-nowrap text-[13px] font-extrabold tracking-[0.04em] sm:text-base lg:text-lg",
+              tone === "inverted" ? "text-sidebar-foreground" : "text-primary",
             )}
           >
-            NEWS x UniCourses
+            <span>NEWS</span>
+            <span
+              aria-hidden
+              className={cn(
+                "text-[0.82em] font-bold",
+                tone === "inverted" ? "text-sidebar-foreground/60" : "text-muted-foreground",
+              )}
+            >
+              ×
+            </span>
+            <span>UniCourses</span>
           </span>
 
           <span
             className={cn(
-              "mt-1 text-[9px] font-medium sm:text-[10px]",
-              tone === "inverted"
-                ? "text-sidebar-foreground/70"
-                : "text-muted-foreground",
+              "mt-1 truncate text-[10px] font-medium sm:text-[11px]",
+              tone === "inverted" ? "text-sidebar-foreground/70" : "text-muted-foreground",
             )}
           >
             مجتمع طلاب HTI

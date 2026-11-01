@@ -36,7 +36,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
       <nav className="container-page flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+        <Link to="/" className="flex min-w-0 items-center" onClick={() => setOpen(false)}>
           <Logo size={38} />
         </Link>
 
