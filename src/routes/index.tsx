@@ -245,6 +245,7 @@ function Home() {
       {/* UNICOURSES */}
       <section className="container-page py-16">
         <SectionHeading
+          eyebrow="UNICOURSES"
           title="UniCourses"
           titleIcon={
             <img

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BookOpen, Briefcase, Code, ExternalLink, Languages, ScrollText, Workflow } from "lucide-react";
 import { UNICOURSES_LINKS } from "@/lib/constants";
+import uniCoursesLogo from "@/assets/unicourses-logo.png.asset.json";
 
 const ICONS = { BookOpen, Briefcase, Code, Languages, Workflow, ScrollText } as const;
 
