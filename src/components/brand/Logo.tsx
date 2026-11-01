@@ -47,9 +47,7 @@ export function Logo({
           <span
             className={cn(
               "mt-1 truncate text-[10px] font-medium sm:text-[11px]",
-              tone === "inverted"
-                ? "text-sidebar-foreground/70"
-                : "text-muted-foreground",
+              tone === "inverted" ? "text-sidebar-foreground/70" : "text-muted-foreground",
             )}
           >
             مجتمع طلاب HTI
