@@ -82,7 +82,7 @@ function Home() {
         )
         .eq("is_published", true)
         .order("published_at", { ascending: false })
-        .limit(6);
+        .limit(2);
       if (error) throw error;
       return (data ?? []) as NewsItem[];
     },
@@ -152,8 +152,8 @@ function Home() {
             }
           />
           {isLoading ? (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {Array.from({ length: 3 }).map((_, i) => (
+            <div className="grid gap-6 sm:grid-cols-2">
+              {Array.from({ length: 2 }).map((_, i) => (
                 <Skeleton key={i} className="h-80 rounded-2xl" />
               ))}
             </div>
@@ -164,7 +164,7 @@ function Home() {
               description="أول ما يتنشر خبر أو فعالية جديدة هتلاقيها هنا مباشرة."
             />
           ) : (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2">
               {data?.map((item, i) => (
                 <div
                   key={item.id}
