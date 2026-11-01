@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BookOpen, Briefcase, Code, ExternalLink, Languages, ScrollText, Workflow } from "lucide-react";
 import { UNICOURSES_LINKS } from "@/lib/constants";
+import uniCoursesLogo from "@/assets/unicourses-logo.png.asset.json";
 
 const ICONS = { BookOpen, Briefcase, Code, Languages, Workflow, ScrollText } as const;
 
@@ -26,10 +27,19 @@ function UniCoursesPage() {
   return (
     <div className="container-page py-12">
       <header className="mb-10 max-w-2xl">
-        <p className="mb-2 text-sm font-bold text-primary-soft">UNICOURSES</p>
-        <h1 className="text-3xl font-extrabold text-foreground sm:text-4xl">
-          بوابة المواد والخطة الدراسية
-        </h1>
+        <div className="flex items-center gap-3.5">
+          <img
+            src={uniCoursesLogo.url}
+            alt="شعار UniCourses"
+            className="size-12 shrink-0 sm:size-14"
+          />
+          <div>
+            <p className="mb-1 text-sm font-bold text-primary-soft">UNICOURSES</p>
+            <h1 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+              بوابة المواد والخطة الدراسية
+            </h1>
+          </div>
+        </div>
         <p className="mt-3 text-muted-foreground">
           كل اللي تحتاجه عن المواد والمتطلبات واللائحة — روابط مباشرة تفتح في تبويب جديد.
         </p>
