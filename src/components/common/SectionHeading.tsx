@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 export function SectionHeading({
   eyebrow,
   title,
+  titleIcon,
   description,
   action,
   align = "start",
@@ -11,6 +12,7 @@ export function SectionHeading({
 }: {
   eyebrow?: string;
   title: string;
+  titleIcon?: ReactNode;
   description?: string;
   action?: ReactNode;
   align?: "start" | "center";
