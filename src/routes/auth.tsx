@@ -264,16 +264,6 @@ function AuthPage() {
               </form>
             </TabsContent>
           </Tabs>
-
-          <div className="my-6 flex items-center gap-3">
-            <span className="h-px flex-1 bg-border" />
-            <span className="text-xs text-muted-foreground">أو</span>
-            <span className="h-px flex-1 bg-border" />
-          </div>
-
-          <Button variant="outline" className="w-full" onClick={handleGoogle} disabled={busy}>
-            المتابعة باستخدام Google
-          </Button>
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
