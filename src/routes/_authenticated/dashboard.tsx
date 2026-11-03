@@ -13,6 +13,7 @@ import {
   NotebookPen,
   Plus,
   BookOpen,
+  Calculator,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -439,6 +440,16 @@ function DashboardPage() {
               <BookOpen className="size-5 text-primary" />
               <span className="text-xs font-bold">UniCourses</span>
             </Link>
+          </Button>
+          <Button asChild variant="outline" className="h-auto flex-col gap-2 py-4">
+            <a
+              href="https://yousef-el3sailly.github.io/GPA_Calculator/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Calculator className="size-5 text-primary" />
+              <span className="text-xs font-bold">GPA Calculator</span>
+            </a>
           </Button>
         </div>
       </section>
