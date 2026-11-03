@@ -28,7 +28,6 @@ import { NewsCard, type NewsItem } from "@/components/news/NewsCard";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Logo } from "@/components/brand/Logo";
 import { SectionHeading } from "@/components/common/SectionHeading";
-import uniCoursesLogo from "@/assets/unicourses-logo.png.asset.json";
 import { EmptyState } from "@/components/common/EmptyState";
 import { FoundersGrid } from "@/components/founders/FoundersGrid";
 import { HeroShowcase } from "@/components/home/HeroShowcase";

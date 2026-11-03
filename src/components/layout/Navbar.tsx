@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, LayoutDashboard, LogOut, UserRound, Settings, Gauge } from "lucide-react";
+import { Menu, X, LayoutDashboard, LogOut, UserRound, Gauge } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -82,11 +82,6 @@ export function Navbar() {
                 <DropdownMenuItem asChild>
                   <Link to="/dashboard" className="flex w-full items-center gap-2">
                     <Gauge className="size-4" /> Dashboard
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/profile" className="flex w-full items-center gap-2">
-                    <Settings className="size-4" /> الإعدادات
                   </Link>
                 </DropdownMenuItem>
                 {isAdmin && (
