@@ -84,11 +84,6 @@ export function Navbar() {
                     <Gauge className="size-4" /> Dashboard
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/profile" className="flex w-full items-center gap-2">
-                    <Settings className="size-4" /> الإعدادات
-                  </Link>
-                </DropdownMenuItem>
                 {isAdmin && (
                   <DropdownMenuItem asChild>
                     <Link to="/admin" className="flex w-full items-center gap-2">
