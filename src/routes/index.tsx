@@ -249,7 +249,7 @@ function Home() {
           title="UniCourses"
           titleIcon={
             <img
-              src={uniCoursesLogo.url}
+              src="/unicourses-logo.png"
               alt="شعار UniCourses"
               className="size-8 sm:size-9"
             />
@@ -365,8 +365,8 @@ function Home() {
       <section className="container-page py-16">
         <SectionHeading
           eyebrow="FOUNDERS"
-          title="صُنّاع الحكاية"
-          description="الأشخاص الذين كانت لهم بصمة في بداية NEWS و UniCourses HTI"
+          title="وراء البداية"
+          description="لأشخاص الذين بدأت معهم رحلة NEWS وUniCourses داخل مجتمع HTI."
           action={
             <Link
               to="/about"
@@ -377,7 +377,7 @@ function Home() {
             </Link>
           }
         />
-        <FoundersGrid limit={6} />
+        <FoundersGrid limit={7} />
         <div className="mt-8 flex justify-center">
           <Link
             to="/about"

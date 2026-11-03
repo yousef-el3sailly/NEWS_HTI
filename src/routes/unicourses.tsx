@@ -29,7 +29,7 @@ function UniCoursesPage() {
       <header className="mb-10 max-w-2xl">
         <div className="flex items-center gap-3.5">
           <img
-            src={uniCoursesLogo.url}
+            src="/unicourses-logo.png"
             alt="شعار UniCourses"
             className="size-12 shrink-0 sm:size-14"
           />

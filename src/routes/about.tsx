@@ -221,8 +221,8 @@ function AboutPage() {
       <section className="container-page pb-14 sm:pb-16">
         <SectionHeading
           eyebrow="FOUNDERS"
-          title="صُنّاع الحكاية"
-          description="الأشخاص الذين كانت لهم بصمة في بداية NEWS و UniCourses HTI"
+          title="وراء البداية"
+          description="الأشخاص الذين بدأت معهم رحلة NEWS وUniCourses داخل مجتمع HTI."
         />
         <FoundersGrid />
       </section>
