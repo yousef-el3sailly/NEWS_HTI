@@ -38,7 +38,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import unicoursesLogo from "@/assets/unicourses-logo.png.asset.json";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
@@ -437,12 +436,6 @@ function DashboardPage() {
             </Link>
           </Button>
           <Button asChild variant="outline" className="h-auto flex-col gap-2 py-4">
-            <Link to="/unicourses">
-              <img src="/unicourses-logo.png" alt="" className="size-5 object-contain" />
-              <span className="text-xs font-bold">UniCourses</span>
-            </Link>
-          </Button>
-          <Button asChild variant="outline" className="h-auto flex-col gap-2 py-4">
             <a
               href="https://yousef-el3sailly.github.io/GPA_Calculator/"
               target="_blank"
@@ -451,6 +444,12 @@ function DashboardPage() {
               <Calculator className="size-5 text-primary" />
               <span className="text-xs font-bold">GPA Calculator</span>
             </a>
+          </Button>
+          <Button asChild variant="outline" className="h-auto flex-col gap-2 py-4">
+            <Link to="/unicourses">
+              <img src="/unicourses-logo.png" alt="" className="size-5 object-contain" />
+              <span className="text-xs font-bold">UniCourses</span>
+            </Link>
           </Button>
         </div>
       </section>
