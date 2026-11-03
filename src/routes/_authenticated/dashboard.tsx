@@ -38,6 +38,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import unicoursesLogo from "@/assets/unicourses-logo.png.asset.json";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
@@ -437,7 +438,7 @@ function DashboardPage() {
           </Button>
           <Button asChild variant="outline" className="h-auto flex-col gap-2 py-4">
             <Link to="/unicourses">
-              <BookOpen className="size-5 text-primary" />
+              <img src={unicoursesLogo.url} alt="" className="size-5 object-contain" />
               <span className="text-xs font-bold">UniCourses</span>
             </Link>
           </Button>
