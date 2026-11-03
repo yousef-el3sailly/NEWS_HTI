@@ -135,17 +135,6 @@ function AuthPage() {
         </div>
 
         <div className="surface-card p-6">
-          <Button onClick={handleGoogle} disabled={busy} className="w-full">
-            {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-            المتابعة باستخدام Google
-          </Button>
-
-          <div className="my-6 flex items-center gap-3">
-            <span className="h-px flex-1 bg-border" />
-            <span className="text-xs text-muted-foreground">أو تابع بالبريد الإلكتروني</span>
-            <span className="h-px flex-1 bg-border" />
-          </div>
-
           <Tabs defaultValue="signin">
             <TabsList className="mb-6 grid w-full grid-cols-2">
               <TabsTrigger value="signin">تسجيل الدخول</TabsTrigger>
@@ -264,6 +253,16 @@ function AuthPage() {
               </form>
             </TabsContent>
           </Tabs>
+
+          <div className="my-6 flex items-center gap-3">
+            <span className="h-px flex-1 bg-border" />
+            <span className="text-xs text-muted-foreground">أو</span>
+            <span className="h-px flex-1 bg-border" />
+          </div>
+
+          <Button variant="outline" className="w-full" onClick={handleGoogle} disabled={busy}>
+            المتابعة باستخدام Google
+          </Button>
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">

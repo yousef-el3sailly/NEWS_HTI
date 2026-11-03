@@ -16,9 +16,7 @@ export function friendlyError(error: unknown, fallback = "حصلت مشكلة، 
     if (/invalid login credentials/i.test(msg)) return "البريد الإلكتروني أو كلمة المرور غير صحيحة.";
     if (/already registered|already exists/i.test(msg)) return "هذا البريد الإلكتروني مسجّل بالفعل.";
     if (/email not confirmed/i.test(msg)) return "من فضلك أكّد بريدك الإلكتروني أولاً.";
-    if (/weak|pwned|easy to guess/i.test(msg))
-      return "كلمة المرور ضعيفة أو معروفة وسهلة التخمين، اختر كلمة مرور أقوى ومختلفة.";
-    if (/password/i.test(msg) && /6|short/i.test(msg))
+    if (/password/i.test(msg) && /6|short|weak/i.test(msg))
       return "كلمة المرور قصيرة جداً (6 أحرف على الأقل).";
     if (/rate limit|too many/i.test(msg)) return "محاولات كتيرة، استنى شوية وحاول تاني.";
     if (/network|fetch/i.test(msg)) return "تعذّر الاتصال بالخادم، تأكد من الإنترنت.";
