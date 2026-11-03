@@ -6,7 +6,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { notificationsQuery, type AppNotification } from "@/lib/student";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 
 function timeAgo(value: string) {
@@ -61,7 +60,7 @@ export function NotificationBell() {
             </Button>
           )}
         </div>
-        <ScrollArea className="max-h-80">
+        <div className="max-h-80 overflow-y-auto overscroll-contain">
           {isLoading ? (
             <p className="px-4 py-8 text-center text-sm text-muted-foreground">جارِ التحميل...</p>
           ) : items.length === 0 ? (
@@ -107,7 +106,7 @@ export function NotificationBell() {
               })}
             </ul>
           )}
-        </ScrollArea>
+        </div>
       </PopoverContent>
     </Popover>
   );
