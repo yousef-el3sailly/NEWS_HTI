@@ -229,11 +229,7 @@ function Home() {
           eyebrow="UNICOURSES"
           title="UniCourses"
           titleIcon={
-            <img
-              src="/unicourses-logo.png"
-              alt="شعار UniCourses"
-              className="size-8 sm:size-9"
-            />
+            <img src="/unicourses-logo.png" alt="شعار UniCourses" className="size-8 sm:size-9" />
           }
           description="مصادرك الدراسية في مكان واحد."
           action={
