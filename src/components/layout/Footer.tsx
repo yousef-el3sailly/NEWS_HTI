@@ -57,12 +57,20 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border px-4 py-5 text-center text-xs leading-relaxed text-muted-foreground">
-        <p className="flex flex-wrap items-center justify-center gap-1.5">
-          <Code2 className="size-4 shrink-0 text-primary" />
-          <span>تم تطوير المنصة بواسطة Yousef Amin A El-Assaily</span>
-        </p>
-        <p className="mt-1">© NEWS x UniCourses HTI</p>
+      <div className="border-t border-border px-4 py-6 sm:py-7">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 text-center sm:gap-4">
+          <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-xs text-muted-foreground sm:text-sm">
+            <span>تم تطوير المنصة بواسطة</span>
+            <span
+              dir="ltr"
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/5 px-3 py-1 font-bold text-primary shadow-sm"
+            >
+              <Code2 className="size-3.5 shrink-0 sm:size-4" />
+              <span className="whitespace-nowrap">Yousef Amin A El-Assaily</span>
+            </span>
+          </p>
+          <p className="text-[11px] text-muted-foreground/80 sm:text-xs">© NEWS x UniCourses HTI</p>
+        </div>
       </div>
     </footer>
   );
