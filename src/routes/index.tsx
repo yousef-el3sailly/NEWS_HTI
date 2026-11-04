@@ -3,22 +3,14 @@ import { useQuery } from "@tanstack/react-query";
 import {
   ArrowLeft,
   BookOpen,
-  Briefcase,
-  Calculator,
   CalendarRange,
   CheckSquare,
-  Code,
-  Database,
   Download,
   ExternalLink,
-  GraduationCap,
-  HardHat,
   Languages,
   LayoutDashboard,
-  Megaphone,
   Newspaper,
   ScrollText,
-  TrendingUp,
   Users,
   Workflow,
 } from "lucide-react";
@@ -31,7 +23,7 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { EmptyState } from "@/components/common/EmptyState";
 import { FoundersGrid } from "@/components/founders/FoundersGrid";
 import { HeroShowcase } from "@/components/home/HeroShowcase";
-import { SPECIALIZATIONS, UNICOURSES_LINKS } from "@/lib/constants";
+import { UNICOURSES_LINKS } from "@/lib/constants";
 import { Code2 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -53,16 +45,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-const SPEC_ICONS: Record<string, LucideIcon> = {
-  Database,
-  Briefcase,
-  Calculator,
-  Megaphone,
-  TrendingUp,
-  Code,
-  HardHat,
-};
 
 const UNI_ICONS: Record<string, LucideIcon> = {
   BookOpen,
@@ -322,40 +304,6 @@ function Home() {
                 <Download className="size-4" /> تحميل PNG / PDF
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SPECIALIZATIONS */}
-      <section className="border-t border-border bg-card/60 py-16">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="SPECIALIZATIONS"
-            title="تخصصات HTI"
-            description="تعرّف على التخصصات المتاحة وطبيعة الدراسة في كل منها."
-          />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {SPECIALIZATIONS.map((s, i) => {
-              const Icon = SPEC_ICONS[s.icon] ?? GraduationCap;
-              return (
-                <div
-                  key={s.id}
-                  className="surface-card group animate-fade-up flex gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-lifted)]"
-                  style={{ animationDelay: `${i * 60}ms` }}
-                >
-                  <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Icon className="size-5" />
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="text-base font-bold text-foreground">{s.name}</h3>
-                    <p className="text-[11px] font-semibold text-primary-soft">{s.en}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {s.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
