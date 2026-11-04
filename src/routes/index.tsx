@@ -84,8 +84,8 @@ function Home() {
             <div className="flex justify-center lg:justify-start">
               <Logo size={88} withText={false} />
             </div>
-            <span className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-card/70 px-3 py-1 text-[10px] font-medium text-muted-foreground/80">
-              <Code2 className="size-3 shrink-0 text-muted-foreground/60" />
+            <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-bold text-primary-soft">
+              <Code2 className="size-3.5" />
               تم تطوير المنصة بواسطة Yousef Amin A El-Assaily
             </span>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.15] text-foreground sm:text-5xl lg:text-6xl">
