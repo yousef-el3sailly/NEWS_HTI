@@ -7,17 +7,10 @@ import {
   CheckSquare,
   Download,
   ExternalLink,
-  Briefcase,
-  Calculator,
-  Code,
-  Database,
-  HardHat,
   Languages,
   LayoutDashboard,
-  Megaphone,
   Newspaper,
   ScrollText,
-  TrendingUp,
   Users,
   Workflow,
 } from "lucide-react";
@@ -30,7 +23,7 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { EmptyState } from "@/components/common/EmptyState";
 import { FoundersGrid } from "@/components/founders/FoundersGrid";
 import { HeroShowcase } from "@/components/home/HeroShowcase";
-import { SPECIALIZATIONS, UNICOURSES_LINKS } from "@/lib/constants";
+import { UNICOURSES_LINKS } from "@/lib/constants";
 import { Code2 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -58,16 +51,6 @@ const UNI_ICONS: Record<string, LucideIcon> = {
   Languages,
   Workflow,
   ScrollText,
-};
-
-const SPEC_ICONS: Record<string, LucideIcon> = {
-  Database,
-  Briefcase,
-  Calculator,
-  Megaphone,
-  Code,
-  HardHat,
-  TrendingUp,
 };
 
 function Home() {
@@ -318,36 +301,6 @@ function Home() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* HTI SPECIALIZATIONS */}
-      <section className="container-page py-16">
-        <SectionHeading
-          eyebrow="HTI SPECIALIZATIONS"
-          title="تخصصات HTI"
-          description="تعرّف على التخصصات المتاحة في المعهد واختر المسار الأقرب لاهتماماتك."
-        />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SPECIALIZATIONS.map((specialization, index) => {
-            const Icon = SPEC_ICONS[specialization.icon] ?? BookOpen;
-            return (
-              <article
-                key={specialization.id}
-                className="surface-card animate-fade-up flex h-full flex-col p-6"
-                style={{ animationDelay: `${index * 60}ms` }}
-              >
-                <span className="inline-flex size-12 items-center justify-center rounded-xl bg-secondary text-primary">
-                  <Icon className="size-5" />
-                </span>
-                <h3 className="mt-4 text-base font-bold text-foreground">{specialization.name}</h3>
-                <p className="text-xs font-semibold text-primary-soft">{specialization.en}</p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {specialization.description}
-                </p>
-              </article>
-            );
-          })}
         </div>
       </section>
 
