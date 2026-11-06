@@ -17,6 +17,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { UniCoursesAssistant } from "@/components/assistant/UniCoursesAssistant";
 
 function NotFoundComponent() {
   return (
@@ -141,6 +142,7 @@ function RootComponent() {
           {!isAdminArea && <Footer />}
         </div>
         <Toaster position="top-center" richColors />
+        <UniCoursesAssistant />
       </AuthProvider>
     </QueryClientProvider>
   );
