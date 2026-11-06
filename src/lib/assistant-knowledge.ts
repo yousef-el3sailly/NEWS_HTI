@@ -176,7 +176,7 @@ export const ASSISTANT_KNOWLEDGE: AssistantKnowledgeItem[] = [
     description: "منصة تجمع مجتمع NEWS وأخباره مع مصادر UniCourses الأكاديمية في مكان واحد.",
     url: "/about",
     actionLabel: "اعرف عن المنصة",
-    aliases: ["معلومات المنصة", "عن المنصة", "معلومات الموقع", "قصة المنصة", "مين انتم", "ما هي المنصة"],
+    aliases: ["معلومات المنصة", "عن المنصة", "معلومات الموقع", "قصة المنصة", "مين انتم"],
   },
   {
     id: "platform-schedule",
