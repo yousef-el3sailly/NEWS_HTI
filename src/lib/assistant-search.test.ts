@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "node:test";
 import { searchAssistantKnowledge } from "@/lib/assistant-search";
 
 function resultFor(question: string) {
